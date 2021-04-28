@@ -1,0 +1,2 @@
+rootProject.name = "AppliftingShowcaseApp"
+include ':app'

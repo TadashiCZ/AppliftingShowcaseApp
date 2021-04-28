@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:elevation="4dp"
+    android:layout_margin="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivLaunches"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="JRTI-1" />
+
+        <ImageView
+            android:id="@+id/ivLaunches"
+            style="@style/MyIconStyle"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="4dp"
+            android:src="@drawable/ic_launch"
+            app:layout_constraintStart_toEndOf="@+id/tvTitle"
+            app:layout_constraintEnd_toStartOf="@+id/ivLandingAttempts"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvLaunches"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/ivLaunches"
+            app:layout_constraintEnd_toEndOf="@id/ivLaunches"
+            app:layout_constraintTop_toBottomOf="@id/ivLaunches"
+            tools:text="6" />
+
+        <ImageView
+            android:id="@+id/ivLandingAttempts"
+            style="@style/MyIconStyle"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="4dp"
+            android:src="@drawable/ic_land_landing"
+            app:layout_constraintStart_toEndOf="@id/ivLaunches"
+            app:layout_constraintEnd_toStartOf="@id/ivLandingSuccess"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvLandingAttempts"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/ivLandingAttempts"
+            app:layout_constraintStart_toStartOf="@id/ivLandingAttempts"
+            app:layout_constraintTop_toBottomOf="@id/ivLandingAttempts"
+            tools:text="4" />
+
+        <ImageView
+            android:id="@+id/ivLandingSuccess"
+            style="@style/MyIconStyle"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="4dp"
+            android:src="@drawable/ic_landing_success"
+            app:layout_constraintStart_toEndOf="@id/ivLandingAttempts"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvLandingSuccess"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/ivLandingSuccess"
+            app:layout_constraintStart_toStartOf="@id/ivLandingSuccess"
+            app:layout_constraintTop_toBottomOf="@id/ivLandingSuccess"
+            tools:text="2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

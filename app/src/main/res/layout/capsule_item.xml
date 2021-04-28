@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="4dp"
+    android:elevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Dragon 2.0" />
+
+        <TextView
+            android:id="@+id/tvSerial"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/tvType"
+            app:layout_constraintStart_toStartOf="@id/tvType"
+            app:layout_constraintEnd_toEndOf="@id/tvType"
+            tools:text="C101" />
+
+        <ImageView
+            android:id="@+id/ivLaunches"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_launch"
+            style="@style/MyIconStyle"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/tvWaterLandings"
+            app:layout_constraintStart_toEndOf="@id/tvSerial"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvLaunches"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintTop_toBottomOf="@id/ivLaunches"
+            app:layout_constraintStart_toStartOf="@id/ivLaunches"
+            app:layout_constraintEnd_toEndOf="@id/ivLaunches"
+            tools:text="6" />
+
+
+        <ImageView
+            android:id="@+id/ivLandLandings"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_land_landing"
+            style="@style/MyIconStyle"
+            android:layout_marginHorizontal="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/tvWaterLandings"
+            app:layout_constraintStart_toEndOf="@id/ivLaunches"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvLandLandings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintTop_toBottomOf="@id/ivLandLandings"
+            app:layout_constraintStart_toStartOf="@id/ivLandLandings"
+            app:layout_constraintEnd_toEndOf="@id/ivLandLandings"
+            tools:text="4" />
+
+        <ImageView
+            android:id="@+id/ivWaterLandings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_water_landing"
+            style="@style/MyIconStyle"
+            android:layout_marginHorizontal="8dp"
+            app:layout_constraintStart_toEndOf="@id/ivLandLandings"
+            app:layout_constraintEnd_toStartOf="@id/ivReuse"
+            app:layout_constraintTop_toTopOf="@id/ivLandLandings"
+      />
+
+        <TextView
+            android:id="@+id/tvWaterLandings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintTop_toBottomOf="@+id/ivWaterLandings"
+            app:layout_constraintStart_toStartOf="@id/ivWaterLandings"
+            app:layout_constraintEnd_toEndOf="@id/ivWaterLandings"
+            tools:text="2" />
+
+        <ImageView
+            android:id="@+id/ivReuse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_reuse"
+            style="@style/MyIconStyle"
+            android:layout_marginHorizontal="8dp"
+            app:layout_constraintStart_toEndOf="@id/ivWaterLandings"
+            app:layout_constraintTop_toTopOf="@id/ivWaterLandings" />
+
+        <TextView
+            android:id="@+id/tvReuse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintStart_toStartOf="@id/ivReuse"
+            app:layout_constraintEnd_toEndOf="@id/ivReuse"
+            app:layout_constraintTop_toBottomOf="@id/ivReuse"
+            tools:text="3" />
+
+        <TextView
+            android:id="@+id/tvLastUpdateTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:paddingHorizontal="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSerial"
+            android:text="@string/last_update_title" />
+
+        <TextView
+            android:id="@+id/tvLastUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="8dp"
+            style="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLastUpdateTitle"
+            tools:text="Presumed to be In Cape Canaveral, FL for refurbishment * Splashed down near Pensacola, Florida, USA, Earth as of Aug 2, 2020." />
+
+        <TextView
+            android:id="@+id/tvStatusTitle"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/status_title"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvStatus"
+            app:layout_constraintEnd_toEndOf="@id/tvStatus" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_marginHorizontal="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvStatusTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="retired" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
